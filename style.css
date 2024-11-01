@@ -1,0 +1,200 @@
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(118deg, #845EC2, #FF6F91);
+  height: 100vh;
+  overflow: hidden;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 400px;
+  background: white;
+  border-radius: 10px;
+  height: 700px;
+}
+
+.center h1 {
+  text-align: center;
+  padding: 0 0 20px 0;
+  border-bottom: 1px solid silver;
+}
+
+.center form {
+  padding: 0 40px;
+  box-sizing: border-box;
+}
+
+form .text_field {
+  position: relative;
+  border-bottom: 2px solid #adadad;
+  margin: 30px 0;
+}
+
+.text_field input {
+  width: 100%;
+  padding: 0 5px;
+  height: 40px;
+  font-size: 16px;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+.text_field label {
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  color: #adadad;
+  transform: translateY(-50%);
+  font-size: 16px;
+  pointer-events: none;
+  transition: .5s;
+}
+
+.text_field span::before {
+  content: '';
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #2691d9;
+  transition: .5s;
+}
+
+.text_field input:focus ~ label,
+.text_field input:valid ~ label {
+  top: -5px;
+  color: #2691d9;
+}
+
+.text_field input:focus ~ span::before,
+.text_field input:valid ~ span::before {
+  width: 100%;
+}
+
+input[type="submit"] {
+  margin-top: 30px;
+  width: 100%;
+  height: 50px;
+  border: 1px solid;
+  background: #2691d9;
+  border-radius: 25px;
+  font-size: 18px;
+  color: #e9f4fb;
+  font-weight: 700;
+  cursor: pointer;
+  outline: none;
+}
+
+input[type="submit"]:hover {
+  border-color: #2691d9;
+  transition: .5s;
+}
+
+.signup {
+  margin: 30px 0;
+  text-align: center;
+  font-size: 16px;
+  color: #666666;
+}
+
+.signup a {
+  color: #2691d9;
+  text-decoration: none;
+}
+
+.signup a:hover {
+  text-decoration: underline;
+}
+
+.check {
+  display: flex;
+  flex-direction: row;
+}
+
+.check div {
+  margin-left: 20px;
+}
+
+/* Styles pour la table des utilisateurs */
+.table {
+  width: 50%;
+  border-collapse: collapse;
+  margin: 20px auto; /* Centre la table */
+  background: none; /* Fond blanc pour la table */
+  border-radius: 10px; /* Bordures arrondies */
+  overflow: hidden; /* Cache les bordures arrondies */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Ombre pour la table */
+}
+
+.table thead {
+  background-color: #f1f1f1; /* Couleur de fond de l'en-tête */
+  color: #845EC2; /* Couleur du texte de l'en-tête */
+}
+
+.table th,
+.table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #dddddd; /* Ligne de séparation des lignes */
+}
+
+.table th {
+  font-weight: bold; /* Texte en gras pour les en-têtes */
+  font-size: 1.1em; /* Taille de police pour les en-têtes */
+}
+
+.table tbody tr {
+  transition: background-color 0.3s ease; /* Animation au survol */
+}
+
+.table tbody tr:hover {
+  background-color: #f1f1f1; /* Couleur de survol des lignes */
+}
+
+.table tbody td a {
+  color: #2691d9; /* Couleur des liens dans la table */
+  text-decoration: none; /* Pas de soulignement par défaut */
+  font-weight: bold; /* Met le texte des liens en gras */
+}
+
+.table tbody td a:hover {
+  text-decoration: underline; /* Soulignement au survol */
+}
+
+/* Styles pour le menu */
+.menu {
+  width: 200px; /* Largeur fixe pour le menu */
+  position: absolute; /* Pour le placer correctement */
+  top: 20px; /* Ajuste la position selon le besoin */
+  left: 20px; /* Ajuste la position selon le besoin */
+  padding: 20px; /* Espacement intérieur */
+}
+
+.nav {
+  margin-top: 0; /* Enlève le marges superflues */
+}
+
+.nav ul {
+  list-style: none; /* Supprime les puces de la liste */
+  padding: 0; /* Enlève le padding */
+}
+
+.nav li {
+  margin-bottom: 20px; /* Espace entre les éléments du menu */
+}
+
+.nav img {
+  height: 50px;
+  width: 50px;
+}
